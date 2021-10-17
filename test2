@@ -1,0 +1,46 @@
+ackage git;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class ParkingSystem implements IParking{
+	int big;
+	int medium;
+	int small;
+	
+	public ParkingSystem(Integer big,Integer medium,Integer small){
+		this.big=big;
+		this.medium=medium;
+		this.small=small;
+	}
+
+	@Override
+	public void print() {
+		System.out.print("[null");
+		for(int i=0;i<list.size();i++) {		
+			System.out.print(","+list.get(i));		
+		}
+		System.out.print("]");
+	}
+	
+
+	@Override
+	public boolean addCar(int carType) {
+		// TODO Auto-generated method stub
+		if(carType==1){
+			if(big>0){
+				big--;
+				return true;
+			}return false;
+		}else if(carType==2){
+			if(medium>0){
+				medium--;
+				return true;
+			}return false;
+		}else if(carType==3){
+			if(small>0){
+				small--;
+				return true;
+			}return false;
+		}
+		return false;
