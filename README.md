@@ -1,7 +1,7 @@
 package git;
 import java.util.ArrayList;
 import java.util.Scanner;
-
+//222
 interface IParking {
 	// 打印输出结果
 	public void print();
